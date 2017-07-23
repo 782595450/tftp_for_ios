@@ -1,0 +1,24 @@
+[; content save ftyp,8,0 ,24
+ content save free,8,32 ,0
+ content save mdat,8,40 ,0
+ content save mvhd,8,56 ,100
+ content save meta,8,172 ,138
+newbox udta 164 8 146 0 
+newbox moov 48 8 262 0 
+mdat 48,40,8 
+element.name mvhdelement.name udtam_iContentSize 146 
+m_iContentSize 262 
+m_iContentSize 318 
+mpeg4_file resize 
+ save file start 
+m_iContentSize 146 
+m_iContentSize 262 
+m_iContentSize 318 
+ save content  ftyp,8,0 
+ save content  free,8,32 
+ save content  mdat,8,40 
+Container content moov 8 48 
+ save content  mvhd,8,56 
+Container content udta 8 164 
+ save content  meta,8,172 
+ save file end 

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "RouteUpgrade.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"txt"];
+    NSData *filedata = [NSData dataWithContentsOfFile:filepath];
+    RouteUpgrade *route = [RouteUpgrade alloc];
+    [route updateRoute:@"test.txt" filePath:filepath progress:^(int progress) {
+        NSLog(@"update progress:%f",progress/(filedata.length*1.0));
+    } complete:^(NSString *error) {
+        NSLog(@"error : %@",error);
+        if ([error isEqualToString:@"success"]) {
+            [route checkFile:@"test.txt"];
+            [route updateStart:^(BOOL result) {
+                
+            }];
+        }else{
+            NSLog(@"上传失败");
+        }
+    }];
+
 }
 
 

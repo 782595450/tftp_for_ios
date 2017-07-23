@@ -13,6 +13,11 @@
 		0927B5CE1F24A1FA008A7346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0927B5CC1F24A1FA008A7346 /* Main.storyboard */; };
 		0927B5D01F24A1FA008A7346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0927B5CF1F24A1FA008A7346 /* Assets.xcassets */; };
 		0927B5D31F24A1FA008A7346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0927B5D11F24A1FA008A7346 /* LaunchScreen.storyboard */; };
+		0927B5E21F24A2D7008A7346 /* app_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 0927B5DC1F24A2D7008A7346 /* app_util.c */; };
+		0927B5E31F24A2D7008A7346 /* tftp_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 0927B5DE1F24A2D7008A7346 /* tftp_client.c */; };
+		0927B5E41F24A2D7008A7346 /* tftpx.c in Sources */ = {isa = PBXBuildFile; fileRef = 0927B5E01F24A2D7008A7346 /* tftpx.c */; };
+		0927B5E81F24A3D5008A7346 /* RouteUpgrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 0927B5E61F24A3D5008A7346 /* RouteUpgrade.m */; };
+		0927B5E91F24A3D5008A7346 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0927B5E71F24A3D5008A7346 /* test.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,15 @@
 		0927B5CF1F24A1FA008A7346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0927B5D21F24A1FA008A7346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0927B5D41F24A1FA008A7346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0927B5DC1F24A2D7008A7346 /* app_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = app_util.c; sourceTree = "<group>"; };
+		0927B5DD1F24A2D7008A7346 /* app_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = app_util.h; sourceTree = "<group>"; };
+		0927B5DE1F24A2D7008A7346 /* tftp_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tftp_client.c; sourceTree = "<group>"; };
+		0927B5DF1F24A2D7008A7346 /* tftp_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tftp_client.h; sourceTree = "<group>"; };
+		0927B5E01F24A2D7008A7346 /* tftpx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tftpx.c; sourceTree = "<group>"; };
+		0927B5E11F24A2D7008A7346 /* tftpx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tftpx.h; sourceTree = "<group>"; };
+		0927B5E51F24A3D5008A7346 /* RouteUpgrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteUpgrade.h; sourceTree = "<group>"; };
+		0927B5E61F24A3D5008A7346 /* RouteUpgrade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteUpgrade.m; sourceTree = "<group>"; };
+		0927B5E71F24A3D5008A7346 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +72,14 @@
 		0927B5C21F24A1FA008A7346 /* tftp_for_ios */ = {
 			isa = PBXGroup;
 			children = (
+				0927B5DB1F24A2D7008A7346 /* TFTP */,
 				0927B5C61F24A1FA008A7346 /* AppDelegate.h */,
 				0927B5C71F24A1FA008A7346 /* AppDelegate.m */,
 				0927B5C91F24A1FA008A7346 /* ViewController.h */,
 				0927B5CA1F24A1FA008A7346 /* ViewController.m */,
+				0927B5E51F24A3D5008A7346 /* RouteUpgrade.h */,
+				0927B5E61F24A3D5008A7346 /* RouteUpgrade.m */,
+				0927B5E71F24A3D5008A7346 /* test.txt */,
 				0927B5CC1F24A1FA008A7346 /* Main.storyboard */,
 				0927B5CF1F24A1FA008A7346 /* Assets.xcassets */,
 				0927B5D11F24A1FA008A7346 /* LaunchScreen.storyboard */,
@@ -77,6 +95,19 @@
 				0927B5C41F24A1FA008A7346 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0927B5DB1F24A2D7008A7346 /* TFTP */ = {
+			isa = PBXGroup;
+			children = (
+				0927B5DC1F24A2D7008A7346 /* app_util.c */,
+				0927B5DD1F24A2D7008A7346 /* app_util.h */,
+				0927B5DE1F24A2D7008A7346 /* tftp_client.c */,
+				0927B5DF1F24A2D7008A7346 /* tftp_client.h */,
+				0927B5E01F24A2D7008A7346 /* tftpx.c */,
+				0927B5E11F24A2D7008A7346 /* tftpx.h */,
+			);
+			path = TFTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +141,7 @@
 				TargetAttributes = {
 					0927B5BF1F24A1FA008A7346 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2T4W7AYHBZ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,6 +171,7 @@
 			files = (
 				0927B5D31F24A1FA008A7346 /* LaunchScreen.storyboard in Resources */,
 				0927B5D01F24A1FA008A7346 /* Assets.xcassets in Resources */,
+				0927B5E91F24A3D5008A7346 /* test.txt in Resources */,
 				0927B5CE1F24A1FA008A7346 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0927B5CB1F24A1FA008A7346 /* ViewController.m in Sources */,
+				0927B5E31F24A2D7008A7346 /* tftp_client.c in Sources */,
+				0927B5E81F24A3D5008A7346 /* RouteUpgrade.m in Sources */,
 				0927B5C81F24A1FA008A7346 /* AppDelegate.m in Sources */,
+				0927B5E41F24A2D7008A7346 /* tftpx.c in Sources */,
+				0927B5E21F24A2D7008A7346 /* app_util.c in Sources */,
 				0927B5C51F24A1FA008A7346 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2T4W7AYHBZ;
 				INFOPLIST_FILE = tftp_for_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Laisq.tftp-for-ios";
@@ -283,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2T4W7AYHBZ;
 				INFOPLIST_FILE = tftp_for_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Laisq.tftp-for-ios";
@@ -309,6 +348,7 @@
 				0927B5D91F24A1FA008A7346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
